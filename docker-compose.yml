@@ -4,4 +4,4 @@ version: "3.8"
    image: satishc67/sat000:vt001
    container_name: satishd2 
    ports:
-   -"4411:5000"
+   - "4978:5000"

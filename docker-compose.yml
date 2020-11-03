@@ -1,5 +1,5 @@
 version: "3.8"
- services:
+services:
   satishwebapp1:
    image: satishc67/sat000:vt001
    container_name: satishd2 

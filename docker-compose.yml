@@ -2,6 +2,6 @@ version: "3.8"
  services:
   satishwebapp1:
    image: satishc67/sat000:vt001
-   container_name:satishd2 
+   container_name: satishd2 
    ports:
    -"4411:5000"

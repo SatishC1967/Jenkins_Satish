@@ -1,0 +1,6 @@
+version:"3.8"
+services:
+satweb1:
+image: satishc67/sat000:appv1.0
+container_name: SatishCond03
+ports:   - "9876:80"

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: satd03uhtmlapp
+  name: satd03uhtmlapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: satd03uhtmlapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: satd03uhtmlapp
+    spec:
+      containers:
+      - image: dockerashu/oracleweb:appv1
+        name: oracleweb
+        resources: {}
+status: {}

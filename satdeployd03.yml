@@ -1,3 +1,11 @@
+# creating namespace
+apiVersion: v1
+kind: Namespace
+metadata:
+ name: satishS
+ 
+ # below def
+ ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -5,6 +13,7 @@ metadata:
   labels:
     app: satd03uhtmlapp
   name: satd03uhtmlapp
+  namespace: satishS #Using namespace
 spec:
   replicas: 1
   selector:
@@ -22,3 +31,20 @@ spec:
         name: oracleweb
         resources: {}
 status: {}
+# exposing deployment to create service
+---
+apiVersion: v1
+kind: service
+metadata:
+  name: satish_svc
+  namespace: satishS
+spec:
+  ports:
+  - name: webport
+  port: 1231
+  protocol: TCP
+  targetPort: 80
+  type: LoadBalancer
+  selector: # comment
+   app: satd03uhtmlapp
+  

@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
- name: satishS
+ name: satish
  
  # below def
 ---
@@ -13,7 +13,7 @@ metadata:
   labels:
     app: satd03uhtmlapp
   name: satd03uhtmlapp
-  namespace: satishS #Using namespace
+  namespace: satish #Using namespace
 spec:
   replicas: 1
   selector:
@@ -37,7 +37,7 @@ apiVersion: v1
 kind: service
 metadata:
   name: satish_svc
-  namespace: satishS
+  namespace: satish
 spec:
   ports:
   - name: webport

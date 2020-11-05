@@ -34,16 +34,16 @@ status: {}
 # exposing deployment to create service
 ---
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: satish_svc
   namespace: satish
 spec:
   ports:
   - name: webport
-  port: 1231
-  protocol: TCP
-  targetPort: 80
+    port: 1231
+    protocol: TCP
+    targetPort: 80
   type: LoadBalancer
   selector: # comment
    app: satd03uhtmlapp
